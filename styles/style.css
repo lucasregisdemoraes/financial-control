@@ -1,0 +1,217 @@
+/* =======    VARIABLE     ======= */
+:root {
+    ---background-color: rgb(232, 232, 232);
+    ---secondary-background-color: #8dd3e3;
+    ---title-color: black;
+    ---text-color: rgb(80, 80, 80);
+}
+
+/* =======    GENERAL STYLES     ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+
+    background-color: var(---background-color);
+    font-family: sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: min(600px, 90vw);
+    margin-inline: auto;
+}
+
+
+/* =======    HEADER     ======= */
+header {
+    background-color: var(---secondary-background-color);
+    border-radius: 0 0 30px 30px;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: black 2px 2px 5px -2px;
+}
+
+header .container .logo-div {
+    position: relative;
+}
+
+header .container .logo-div h1 {
+    color: var(---title-color);
+    font-size: 35px;
+    text-shadow: 2px 2px 3px black;
+}
+
+header .container .logo-div .dark-theme-button {
+    display: flex;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    height: 25px;
+    width: 40px;
+    background-color: rgb(111, 111, 111);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+header .container .logo-div .dark-theme-button.active {
+    background-color: rgb(45, 104, 255);
+}
+
+header .container .logo-div .dark-theme-button div {
+    height: 19px;
+    width: 19px;
+    background-color: white;
+    border-radius: 12.5px;
+    align-self: center;
+    margin-left: 4px;
+}
+
+header .container .logo-div .dark-theme-button.active div {
+    margin-left: 22px;
+    transition: margin 1s;
+}
+
+/* === nav */
+header .container nav {
+    margin-top: 10px;
+}
+
+header .container nav ul {
+    display: flex;
+    padding: 0 10px;
+    justify-content: center;
+}
+
+header .container nav ul li a {
+    display: inline-block;
+    font-size: 18px;
+    padding: 7px 10px;
+    color: var(---text-color);
+    border-radius: 10px;
+}
+
+header .container nav ul li.active a {
+    background-color: white;
+    color: var(---title-color);
+    font-weight: 900;
+}
+
+/* =======    MAIN     ======= */
+main {
+    padding: 30px 0;
+}
+
+main .container section .balance {
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: black 2px 2px 5px -2px;
+}
+
+main .container section .balance strong {
+    font-size: 20px;
+    color: var(---title-color);
+}
+
+main .container section .balance p {
+    font-size: 35px;
+    color: var(---text-color);
+}
+
+main .container #table-section {
+    margin-top: 25px;
+}
+
+main .container #table-section h2 {
+    color: var(---title-color);
+}
+
+/* === table */
+main .container section table {
+    width: 100%;
+    border-spacing: 0 7px;
+    text-align: left;
+}
+
+main .container section table thead tr th {
+    color: var(---title-color);
+}
+
+main .container section table thead tr,
+main .container section table tbody tr {
+    height: 50px;
+    border-radius: 15px;
+    box-shadow: black 2px 2px 5px -4px;
+}
+
+main .container section table tbody tr {
+    color: var(---text-color);
+    opacity: 0.7;
+    transition: opacity .3s;
+    max-width: 100%;
+}
+
+main .container section table tbody tr:hover {
+    opacity: 1;
+}
+
+main .container section table thead tr th,
+main .container section table tbody tr td {
+    background-color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+
+main .container section table thead tr th:first-child,
+main .container section table tbody tr td:first-child {
+    border-radius: 15px 0 0 15px;
+}
+
+main .container section table thead tr th:last-child,
+main .container section table tbody tr td:last-child {
+    border-radius: 0 15px 15px 0;
+}
+
+main .container section table tbody tr td:nth-child(2) {
+    word-break: break-all;
+}
+
+/* =======    FOOTER     ======= */
+footer {
+    background-color: var(---secondary-background-color);
+    border-radius: 30px 30px 0 0;
+    padding: 100px 0;
+    text-align: center;
+}
+
+footer .container p {
+    color: var(---text-color);
+    font-size: 18px;
+}
+
+footer .container p a {
+    color: var(---title-color);
+    font-weight: 900;
+    text-shadow: 0px 0px 1px black;
+}
+
+footer .container p a:hover {
+    color: var(---title-color);
+    text-shadow: 0px 0px 5px black;
+}
